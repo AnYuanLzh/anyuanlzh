@@ -12,7 +12,7 @@
 ## 安装vue-router
     npm install vue-router@4
 
-## 安装tailwindcss相亲库
+## 安装tailwindcss相关的库
     npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
     npx tailwindcss init -p
 
