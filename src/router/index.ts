@@ -17,7 +17,12 @@ const routes: Array<RouteRecordRaw> = [
         path: "/calc",
         name: "calc",
         component: () => import("../pages/Calculator.vue"),
-    }
+    },
+    {
+        path: "/calendar",
+        name: "calendar",
+        component: () => import("../pages/Calendar.vue"),
+    },
 ];
 //创建路由
 const router = createRouter({

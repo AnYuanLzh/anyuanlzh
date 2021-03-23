@@ -29,6 +29,12 @@
                     计算器
                 </router-link>
                 <span class="p-2">|</span>
+                <router-link
+                    :to="{ name: 'calendar' }"
+                    class="lzh-link" >
+                    日历
+                </router-link>
+                <span class="p-2">|</span>
             </div>
         </div>
         <router-view></router-view>
@@ -47,6 +53,9 @@ export default defineComponent({
 </script>
 
 <style>
+html{
+    font-size: 16px;
+}
 body {
     background: #e3e3e3;
 }
