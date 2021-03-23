@@ -17,11 +17,17 @@
                 </div>
             </div>
             <div class="bg-gray-500 text-sm text-center py-1 text-gray-100">
-                <router-link :to="{ name: 'home' }">首页</router-link>
+                <router-link 
+                    :to="{ name: 'home' }"
+                    class="lzh-link">
+                    首页
+                </router-link>
                 <span class="p-2">|</span>
-                <router-link :to="{ name: 'calc' }">计算器</router-link>
-                <span class="p-2">|</span>
-                <router-link :to="{ name: 'calc_tw' }">计算器tw</router-link>
+                <router-link
+                    :to="{ name: 'calc' }"
+                    class="lzh-link" >
+                    计算器
+                </router-link>
                 <span class="p-2">|</span>
             </div>
         </div>
@@ -52,7 +58,11 @@ body {
     /* color: #2c3e50; */
     /* margin-top: 60px; */
 }
-.lzh-header-bg {
-    background-image: url("./assets/imgs/logo-bg.jpg");
+@layer utilities{
+    .lzh-link{
+        /* 需要在tailwind.config.js中为textColor开启visited变体 */
+        @apply hover:text-blue-300 visited:text-pink-300;
+
+    }
 }
 </style>

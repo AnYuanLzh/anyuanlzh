@@ -1,5 +1,6 @@
 import {
     createRouter,
+    createWebHashHistory,
     createWebHistory,
     RouteRecordRaw
 } from "vue-router";
@@ -16,16 +17,11 @@ const routes: Array<RouteRecordRaw> = [
         path: "/calc",
         name: "calc",
         component: () => import("../pages/Calculator.vue"),
-    },
-    {
-        path: "/calc_tw",
-        name: "calc_tw",
-        component: () => import("../pages/Calculator_tw.vue"),
-    },
+    }
 ];
 //创建路由
 const router = createRouter({
     history: createWebHistory(),
     routes,
-})
+});
 export default router;

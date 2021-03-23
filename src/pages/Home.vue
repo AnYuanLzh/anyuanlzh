@@ -109,9 +109,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 @layer base {
 

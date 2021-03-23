@@ -3,12 +3,8 @@
         <h1 class="text-center pt-2 pb-1">简单计算器 native css 版</h1>
         <h2 class="text-center pb-1 text-gray-400 text-xs underline italic">
             参考来源：
-            <a
-                href="https://www.bilibili.com/video/BV1Ag4y1q7sU/?spm_id_from=333.788.recommend_more_video.-1"
-            >
-                B站 - CodingStartup起码课 -【Vue】制作新拟态计算器</a
-            >
-        </h2>
+            <a href="https://www.bilibili.com/video/BV1Ag4y1q7sU/?spm_id_from=333.788.recommend_more_video.-1"> B站 - CodingStartup起码课 -【Vue】制作新拟态计算器</a>
+            </h2>
         <div class="lzh-wrap">
             <div class="lzh-calcalutor">
                 <!-- 结果 -->
@@ -89,8 +85,8 @@ export default defineComponent({
             }
 
             // if number
-            if (state.equation.length > 10) {
-                return;
+            if(state.equation.length>10){
+                return
             }
             if (!isOperator(charactor)) {
                 if (charactor === "." && state.isDecimalAdded) {
@@ -131,7 +127,7 @@ export default defineComponent({
         //点击±时
         const calculateToggle = (): void => {
             console.log("calculateToggle");
-            if (state.isOperatorAdded || !state.isStarted) {
+            if(state.isOperatorAdded || !state.isStarted){
                 return;
             }
             state.equation = state.equation + "* -1";
@@ -140,7 +136,7 @@ export default defineComponent({
         //点击%时
         const calculatePercentage = (): void => {
             console.log("calculatePercenttage");
-            if (state.isOperatorAdded || !state.isStarted) {
+            if(state.isOperatorAdded || !state.isStarted){
                 return;
             }
             state.equation = state.equation + "* 0.01";
@@ -169,56 +165,75 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-@layer utilities {
-    .lzh-wrap {
-        @apply flex justify-center items-center py-16;
-        background-color: #eee;
-    }
-    .lzh-calcalutor {
-        /* 定义两个css变量 */
-        --btn-w: 80px;
-        --btn-h: 80px;
-        /* 设置一个4x6的grid布局 */
-        @apply grid p-6 rounded-2xl;
-        grid-template-areas:
-            "result result result result"
-            "ac plus-minus percent divide"
-            "num-7 num-8 num-9 multiply"
-            "num-4 num-5 num-6 substract"
-            "num-1 num-2 num-3 add"
-            "num-0 num-0 dot equal";
-        grid-template-columns: repeat(4, var(--btn-w));
-        grid-template-rows: repeat(6, var(--btn-h));
+.lzh-container {
+    /* background-color: #eee; */
+    /* height: 80vh; */
+}
+.lzh-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #eee;
+}
+.lzh-calcalutor {
+    /* 定义两个css变量 */
+    --btn-w: 80px;
+    --btn-h: 80px;
 
-        /* 边框阴影 */
-        /* x偏移量 | y偏移量 | 模糊半径 | 扩散半径| 阴影颜色 */
-        box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1),
-            8px 8px 16px -10px rgba(0, 0, 0, 0.5);
-    }
+    /* 设置一个4x6的grid布局 */
+    display: grid;
+    grid-template-areas:
+        "result result result result"
+        "ac plus-minus percent divide"
+        "num-7 num-8 num-9 multiply"
+        "num-4 num-5 num-6 substract"
+        "num-1 num-2 num-3 add"
+        "num-0 num-0 dot equal";
+    grid-template-columns: repeat(4, var(--btn-w));
+    grid-template-rows: repeat(6, var(--btn-h));
 
-    .lzh-calcalutor button {
-        @apply  outline-none m-2 rounded-full font-normal text-2xl text-gray-400;
-        font-family: Helvetica;
-        /* 设置出一点凹下去的感觉 */
-        background: linear-gradient(
-            135deg,
-            rgba(220, 220, 220, 1) 0%,
-            rgba(246, 246, 246, 1) 100%
-        );
-        box-shadow: -4px -4px 16px -10px rgba(255, 255, 255, 1),
-            4px 4px 16px -10px rgba(0, 0, 0, 0.3);
-    }
-    .lzh-calcalutor button:active {
-        box-shadow: -4px -4px 16px -10px rgba(255, 255, 255, 1) inset,
-            4px 4px 16px -10px rgba(0, 0, 0, 0.3) inset;
-    }
-    .lzh-calcalutor .lzh-result {
-        @apply text-right text-4xl px-5 text-gray-700 overflow-hidden;
-        line-height: var(--btn-h);
-        font-family: Helvetica;
-    }
+    /* 边框阴影 */
+    /* x偏移量 | y偏移量 | 模糊半径 | 扩散半径| 阴影颜色 */
+    box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1),
+        8px 8px 16px -10px rgba(0, 0, 0, 0.5);
+
+    padding: 24px;
+    border-radius: 20px;
+}
+
+.lzh-calcalutor button {
+    margin: 8px;
+    padding: 0;
+    border: 0;
+    display: block;
+    outline: none;
+    border-radius: calc(var(--btn-h) / 2);
+    font-family: Helvetica;
+    font-weight: normal;
+    font-size: 24px;
+    color: #999;
+    /* 设置出一点凹下去的感觉 */
+    background: linear-gradient(
+        135deg,
+        rgba(220, 220, 220, 1) 0%,
+        rgba(246, 246, 246, 1) 100%
+    );
+    box-shadow: -4px -4px 16px -10px rgba(255, 255, 255, 1),
+        4px 4px 16px -10px rgba(0, 0, 0, 0.3);
+}
+.lzh-calcalutor button:active {
+    box-shadow: -4px -4px 16px -10px rgba(255, 255, 255, 1) inset,
+        4px 4px 16px -10px rgba(0, 0, 0, 0.3) inset;
+}
+.lzh-calcalutor .lzh-result {
+    text-align: right;
+    line-height: var(--btn-h);
+    font-size: 48px;
+    font-family: Helvetica;
+    padding: 0 20px;
+    color: #666;
+    overflow: hidden;
 }
 </style>

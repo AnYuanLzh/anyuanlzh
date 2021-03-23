@@ -1,1 +1,0 @@
-import{d as a,p as s,f as e,o as t,c as d,e as o,a as n}from"./vendor.52915004.js";var c=a({name:"CompName",setup:()=>({})});const r=o("data-v-6d62e9a9");s("data-v-6d62e9a9");const p=n("h1",{class:"text-center py-2"},"简单计算器 tailwindcss版",-1);e();const v=r(((a,s,e,o,n,c)=>(t(),d("div",null,[p]))));c.render=v,c.__scopeId="data-v-6d62e9a9";export default c;
