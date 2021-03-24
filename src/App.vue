@@ -57,7 +57,7 @@ export default defineComponent({
         if (path) {
             console.log("app-path:", path);
             localStorage.removeItem("path");
-            router.push("/");
+            router.push(path);
         }
         /************* end ******* for github page's spa */
     },
