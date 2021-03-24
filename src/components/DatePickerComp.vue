@@ -7,9 +7,9 @@
         <input
             id="input"
             type="text"
-            readonly="readonly"
             :value="formatDate"
             placeholder="yyy-mm-dd"
+            readonly
             class="w-44 pl-1 pr-8 py-0.5"
         />
         <span class="w-5 absolute inset-y-0.5 right-0.5">
@@ -172,6 +172,9 @@ export default defineComponent({
             },
         },
     },
+    emits:[
+        "onchange"
+    ],
     setup(props, { emit }) {
         // console.log("setup:", context);
         const isVisible = ref<boolean>(false);
@@ -236,21 +239,21 @@ export default defineComponent({
         const chooseDate = (row: number, col: number): void => {
             let date = visibleDates.value[(row - 1) * 7 + (col - 1)];
             //我们触发一个事件
-            emit("change", date);
+            emit("onchange", date);
         };
         const addYear = (num: number) => {
             // let date = props.value;
             // let dateTime = date.setFullYear(date.getFullYear() + num);
             // date = new Date(dateTime);
             let date = addYears(props.value, num);
-            emit("change", date);
+            emit("onchange", date);
         };
         const addMonth = (num: number) => {
             // let date = props.value;
             // let dateTime = date.setMonth(date.getMonth() + num);
             // date = new Date(dateTime);
             let date = addMonths(props.value, num);
-            emit("change", date);
+            emit("onchange", date);
         };
         const setToday = (): void => {
             let ymd1: IYearMonthDay = getYearMonthDay(props.value);
@@ -261,7 +264,7 @@ export default defineComponent({
                 ymd1.month !== ymd2.month ||
                 ymd1.day !== ymd2.day
             ) {
-                emit("change", new Date());
+                emit("onchange", new Date());
             }
         };
         return {

@@ -11,9 +11,8 @@
             </p>
             <DataPickerComp
                 :value="pickDate"
-                @change="(date) => (pickDate = date)"
+                @onchange="onPickerChange"
             />
-
         </div>
     </div>
 </template>
@@ -28,9 +27,13 @@ export default defineComponent({
     },
     setup() {
         const pickDate = ref<Date>(new Date());
+        const onPickerChange = (newDate:Date):void=>{
+            pickDate.value = newDate;
+        }
 
         return {
             pickDate,
+            onPickerChange
         };
     },
 });

@@ -12,7 +12,7 @@
             <p>
                 选择托管在gitee上（而不是放在github还是觉得gitee在国内访问还是要快一点）。
             </p>
-            <p>如果对这个主面的工程感觉兴趣可以点击：<a href="https://gitee.com/anyuanlzh"
+            <p>如果对这个主面的工程感觉兴趣可以点击：<a href="https://gitee.com/anyuanlzh/anyuanlzh"
                     target: _blank>源码</a> 查看。</p>
         </div>
         <h2 class="mt-6 font-bold">这里主要使用的web技术：</h2>
