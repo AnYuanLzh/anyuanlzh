@@ -8,6 +8,8 @@ module.exports = {
         extend: {
             //为textColor开启visited变体
             textColor: ["visited"],
+            borderWidth: ["hover"],
+            borderRadius: ["hover"],
         },
     },
     plugins: [],

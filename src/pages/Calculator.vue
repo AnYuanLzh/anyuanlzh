@@ -1,6 +1,6 @@
 <template>
     <div class="lzh-container">
-        <h1 class="text-center pt-2 pb-1">简单计算器 native css 版</h1>
+        <h1 class="text-center pt-2 pb-1">vue3+ts实现的简单计算器</h1>
         <h2 class="text-center pb-1 text-gray-400 text-xs underline italic">
             参考来源：
             <a

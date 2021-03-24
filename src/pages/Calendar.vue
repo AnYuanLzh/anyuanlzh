@@ -5,25 +5,32 @@
             <h2 class="font-bold">原生的日期组件:</h2>
             <input type="date" /><br /><br />
 
-            <h2 class="font-bold">vue3实现的日期组件:</h2>
-            <data-comp :value="curDate" :width='208' :height='36' />
+            <h2 class="font-bold">vue3+ts实现的日期组件:</h2>
+            <p class="pb-1 text-gray-400 text-xs underline italic">
+                有参考：https://www.bilibili.com/video/BV1k4411C7DX?from=search&seid=7343710285072819819
+            </p>
+            <DataPickerComp
+                :value="pickDate"
+                @change="(date) => (pickDate = date)"
+            />
+
         </div>
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive, ref } from "vue";
-import DataComp from "../components/DateComp.vue";
+import DataPickerComp from "../components/DatePickerComp.vue";
 export default defineComponent({
     name: "Calendar",
     components: {
-        DataComp,
+        DataPickerComp,
     },
     setup() {
-        const curDate = ref<Date>(new Date());
+        const pickDate = ref<Date>(new Date());
 
         return {
-            curDate,
+            pickDate,
         };
     },
 });
