@@ -17,21 +17,15 @@
                 </div>
             </div>
             <div class="bg-gray-500 text-sm text-center py-1 text-gray-100">
-                <router-link 
-                    :to="{ name: 'home' }"
-                    class="lzh-link">
+                <router-link :to="{ name: 'home' }" class="lzh-link">
                     首页
                 </router-link>
                 <span class="p-2">|</span>
-                <router-link
-                    :to="{ name: 'calc' }"
-                    class="lzh-link" >
+                <router-link :to="{ name: 'calc' }" class="lzh-link">
                     计算器
                 </router-link>
                 <span class="p-2">|</span>
-                <router-link
-                    :to="{ name: 'calendar' }"
-                    class="lzh-link" >
+                <router-link :to="{ name: 'calendar' }" class="lzh-link">
                     日历
                 </router-link>
                 <span class="p-2">|</span>
@@ -46,14 +40,26 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import router from "./router";
 
 export default defineComponent({
     name: "App",
+    setup(x, context) {
+
+        /************* begin ****** for github page's spa */
+        let path = localStorage.getItem("path");
+        if (path) {
+            console.log("app-path:",path);
+            localStorage.removeItem("path");
+            router.push('/');
+        }
+        /************* end ******* for github page's spa */
+    },
 });
 </script>
 
 <style>
-html{
+html {
     font-size: 16px;
 }
 body {
@@ -67,11 +73,10 @@ body {
     /* color: #2c3e50; */
     /* margin-top: 60px; */
 }
-@layer utilities{
-    .lzh-link{
+@layer utilities {
+    .lzh-link {
         /* 需要在tailwind.config.js中为textColor开启visited变体 */
         @apply hover:text-blue-300 visited:text-pink-300;
-
     }
 }
 </style>
