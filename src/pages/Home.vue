@@ -40,7 +40,6 @@
                     现在主要在Notion上作笔记，也推荐大家使用，个人觉得是个不错的工具。
                 </p>
             </li>
-
             <li>
                 <a
                     target: _blank
@@ -50,6 +49,17 @@
                 >
                 <p>
                     Tailwind CSS 是一个工具集 CSS 框架，这个真的是不要太香，推荐使用。
+                </p>
+            </li>
+            <li>
+                <a
+                    target: _blank
+                    class="lzh-a"
+                    href="https://www.typescriptlang.org/"
+                    >TypeScript</a
+                >
+                <p>
+                    TypeScript 是 JavaScript 的超集，是 JavaScript 的强类型版本。我认为 TypeScript 是一项非常值得学习的技术。
                 </p>
             </li>
         </ul>
