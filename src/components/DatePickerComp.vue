@@ -111,7 +111,7 @@ import {
     createDate,
     getYearMonthDay,
     IYearMonthDay,
-} from "../utils/util";
+} from "../utils";
 
 export default defineComponent({
     name: "DatePickerComp",
