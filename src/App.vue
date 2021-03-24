@@ -32,8 +32,15 @@
             </div>
         </div>
         <router-view></router-view>
-        <div class="bg-gray-500 text-gray-100 h-10">
-            <p class="text-center leading-10">footer</p>
+        <div class="bg-gray-500 text-gray-100 h-10 text-center leading-10">
+            <!-- <p class="text-center leading-10">footer</p> -->
+            <router-link :to="{ name: 'about' }" class="lzh-link underline">
+                关于
+            </router-link>
+            <span class="p-2"> </span>
+            <router-link :to="{ name: 'notfound' }" class="lzh-link underline">
+                404
+            </router-link>
         </div>
     </div>
 </template>
@@ -45,13 +52,12 @@ import router from "./router";
 export default defineComponent({
     name: "App",
     setup(x, context) {
-
         /************* begin ****** for github page's spa */
         let path = localStorage.getItem("path");
         if (path) {
-            console.log("app-path:",path);
+            console.log("app-path:", path);
             localStorage.removeItem("path");
-            router.push('/');
+            router.push("/");
         }
         /************* end ******* for github page's spa */
     },

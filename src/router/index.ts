@@ -8,6 +8,11 @@ import Home from '../pages/Home.vue';
 
 //配置路由
 const routes: Array<RouteRecordRaw> = [
+    // {
+    //     path: "/:pathMatch(.*)",
+    //     name: "notfound",
+    //     component: () => import("../pages/NotFound.vue"),
+    // },
     {
         path: "/",
         name: "home",
@@ -22,6 +27,20 @@ const routes: Array<RouteRecordRaw> = [
         path: "/calendar",
         name: "calendar",
         component: () => import("../pages/Calendar.vue"),
+    },
+    {
+        path: "/about",
+        name: "about",
+        component: () => import("../pages/About.vue"),
+    },
+    {
+        path: "/404",
+        name: "notfound",
+        component: () => import("../pages/NotFound.vue"),
+    },
+    {
+        path: "/:pathMatch(.*)",
+        redirect: "/404"
     },
 ];
 //创建路由
