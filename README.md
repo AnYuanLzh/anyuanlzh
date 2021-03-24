@@ -5,8 +5,8 @@
 
 ## 工程创建过程
 创建vite工程：
-    npm init @vitejs/app 08_calculate_vue_vite_tailwind
-    cd 08_calculate_vue_vite_tailwind
+    npm init @vitejs/app anyuanlzh
+    cd anyuanlzh
     npm install
     注：选择vue-ts
 ## 安装vue-router
