@@ -59,8 +59,9 @@ export default defineComponent({
         mounted() {
             /************* begin ****** for github page's spa */
             let path = localStorage.getItem("path");
+            console.log("app-path1:", path);
             if (path) {
-                console.log("app-path:", path);
+                console.log("app-path2:", path);
                 localStorage.removeItem("path");
                 router.push(path);
             }
