@@ -29,6 +29,11 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("../pages/Calendar.vue"),
     },
     {
+        path: "/csslayout",
+        name: "csslayout",
+        component: () => import("../pages/CssLayout.vue"),
+    },
+    {
         path: "/about",
         name: "about",
         component: () => import("../pages/About.vue"),
@@ -40,7 +45,7 @@ const routes: Array<RouteRecordRaw> = [
     },
     {
         path: "/:pathMatch(.*)",
-        redirect: "/404"
+        redirect: "/404",
     },
 ];
 //创建路由

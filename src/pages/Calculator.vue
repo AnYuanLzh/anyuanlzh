@@ -1,5 +1,5 @@
 <template>
-    <div class="lzh-container">
+    <div>
         <h1 class="text-center pt-2 pb-1">vue3+ts实现的简单计算器</h1>
         <h2 class="text-center pb-1 text-gray-400 text-xs underline italic">
             参考来源：
@@ -174,7 +174,7 @@ export default defineComponent({
 @tailwind utilities; */
 @layer utilities {
     .lzh-wrap {
-        @apply flex justify-center items-center py-16;
+        @apply flex justify-center items-center py-6;
         background-color: #eee;
     }
     .lzh-calcalutor {
@@ -182,7 +182,7 @@ export default defineComponent({
         --btn-w: 80px;
         --btn-h: 80px;
         /* 设置一个4x6的grid布局 */
-        @apply grid p-6 rounded-2xl;
+        @apply grid p-6 rounded-2xl bg-gray-200;
         grid-template-areas:
             "result result result result"
             "ac plus-minus percent divide"

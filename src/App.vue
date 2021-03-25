@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div class="container mx-auto font-sans">
         <div class="bg-gray-800 relative">
             <div class="lzh-header-bg pl-4 flex items-center gap-2 py-2">
                 <div>
@@ -29,19 +29,23 @@
                     日历
                 </router-link>
                 <span class="p-2">|</span>
+                <router-link :to="{ name: 'csslayout' }" class="lzh-link">
+                    css布局
+                </router-link>
+                <span class="p-2">|</span>
+                <router-link :to="{ name: 'about' }" class="lzh-link underline">
+                    关于
+                </router-link>
+                <span class="p-2"> </span>
+                <router-link
+                    :to="{ name: 'notfound' }"
+                    class="lzh-link underline"
+                >
+                    404
+                </router-link>
             </div>
         </div>
         <router-view></router-view>
-        <div class="bg-gray-500 text-gray-100 h-10 text-center leading-10">
-            <!-- <p class="text-center leading-10">footer</p> -->
-            <router-link :to="{ name: 'about' }" class="lzh-link underline">
-                关于
-            </router-link>
-            <span class="p-2"> </span>
-            <router-link :to="{ name: 'notfound' }" class="lzh-link underline">
-                404
-            </router-link>
-        </div>
     </div>
 </template>
 
@@ -51,7 +55,7 @@ import router from "./router";
 
 export default defineComponent({
     name: "App",
-    methods:{
+    methods: {
         mounted() {
             /************* begin ****** for github page's spa */
             let path = localStorage.getItem("path");
@@ -62,7 +66,7 @@ export default defineComponent({
             }
             /************* end ******* for github page's spa */
         },
-    }
+    },
 });
 </script>
 
@@ -71,7 +75,7 @@ html {
     font-size: 16px;
 }
 body {
-    background: #e3e3e3;
+    background: #e8e8e8;
 }
 #app {
     /* font-family: Avenir, Helvetica, Arial, sans-serif; */
