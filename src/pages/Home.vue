@@ -10,14 +10,27 @@
                 弄这么个静态主页，可以展示一下学习到的一些小例子小demo什么。
             </p>
             <p>
-                在gitee上的主页是：https://anyuanlzh.gitee.io. 查看<a href="https://gitee.com/anyuanlzh/anyuanlzh"
-                    target: _blank>源码</a> 。
-                在github上的主页是：https://anyuanlzh.github.io 查看<a href="https://github.com/AnYuanLzh/anyuanlzh"
-                    target: _blank>源码</a> 。
-                工程源其实都是同一份，是同时托管在上述两平台上的。其实现在的gitee上挺好用的，在国内访问速度快，托管主页的设置也更好(尤其是单面应用的静态主页)。当然github上的资源更多...
+                在gitee上的主页是：<a href="https://anyuanlzh.gitee.io"
+                    target: _blank>https://anyuanlzh.gitee.io</a></p>
+            <p>
+                在github上的主页是：<a href="https://anyuanlzh.github.io"
+                    target: _blank>https://anyuanlzh.github.io</a>
+                </p>
+            <p>两个地址都可以访问。工程源码其实都是同一份，是同时托管在上述两平台上的。其实现在的gitee上挺好用的，在国内访问速度快，托管主页的设置也更好(尤其是单面应用的静态主页)。当然github上的资源更多...
             </p>
-            <p>如果对这个主面的工程感觉兴趣可以点击：<a href="https://gitee.com/anyuanlzh/anyuanlzh"
-                    target: _blank>源码</a> 查看。</p>
+            <p>如果对这个主页的工程感觉兴趣可以点击查看源码：
+                <a href="https://gitee.com/anyuanlzh/anyuanlzh"
+                    target: _blank>
+                    <img class="inline" height="24" version="1.1" width="24" src="../assets/imgs/gitee-logo.png" />
+                </a>
+                <a href="https://github.com/AnYuanLzh/anyuanlzh"
+                    target: _blank>
+                    <svg class="ml-4 inline" height="24" viewBox="0 0 16 16" version="1.1" width="24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                        </path>
+                    </svg>
+                </a>
+            </p>
         </div>
         <h2 class="mt-6 font-bold">这里主要使用的web技术：</h2>
         <hr class="my-2" />
