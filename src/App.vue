@@ -50,15 +50,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import router from "./router";
 
 export default defineComponent({
     name: "App",
-    methods: {
-        mounted() {
+    setup() {
+        onMounted((): void => {
+            console.log("onMounted!");
             /************* begin ****** for github page's spa */
             let path = localStorage.getItem("path");
+            // path = "about";
             console.log("app-path1:", path);
             if (path) {
                 console.log("app-path2:", path);
@@ -66,8 +68,24 @@ export default defineComponent({
                 router.replace(path);
             }
             /************* end ******* for github page's spa */
-        },
+        });
+        return {};
     },
+    // methods: {
+    //     mounted() {
+    //         console.log("xxxxx");
+    //         /************* begin ****** for github page's spa */
+    //         let path = localStorage.getItem("path");
+    //         path = 'about'
+    //         console.log("app-path1:", path);
+    //         if (path) {
+    //             console.log("app-path2:", path);
+    //             localStorage.removeItem("path");
+    //             router.replace(path);
+    //         }
+    //         /************* end ******* for github page's spa */
+    //     },
+    // },
 });
 </script>
 
