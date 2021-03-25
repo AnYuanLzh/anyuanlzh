@@ -51,16 +51,18 @@ import router from "./router";
 
 export default defineComponent({
     name: "App",
-    setup(x, context) {
-        /************* begin ****** for github page's spa */
-        let path = localStorage.getItem("path");
-        if (path) {
-            console.log("app-path:", path);
-            localStorage.removeItem("path");
-            router.push(path);
-        }
-        /************* end ******* for github page's spa */
-    },
+    methods:{
+        mounted() {
+            /************* begin ****** for github page's spa */
+            let path = localStorage.getItem("path");
+            if (path) {
+                console.log("app-path:", path);
+                localStorage.removeItem("path");
+                router.push(path);
+            }
+            /************* end ******* for github page's spa */
+        },
+    }
 });
 </script>
 
