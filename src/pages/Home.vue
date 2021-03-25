@@ -10,7 +10,11 @@
                 弄这么个静态主页，可以展示一下学习到的一些小例子小demo什么。
             </p>
             <p>
-                选择托管在gitee上（而不是放在github还是觉得gitee在国内访问还是要快一点）。
+                在gitee上的主页是：https://anyuanlzh.gitee.io. 查看<a href="https://gitee.com/anyuanlzh/anyuanlzh"
+                    target: _blank>源码</a> 。
+                在github上的主页是：https://anyuanlzh.github.io 查看<a href="https://github.com/AnYuanLzh/anyuanlzh"
+                    target: _blank>源码</a> 。
+                工程源其实都是同一份，是同时托管在上述两平台上的。其实现在的gitee上挺好用的，在国内访问速度快，托管主页的设置也更好(尤其是单面应用的静态主页)。当然github上的资源更多...
             </p>
             <p>如果对这个主面的工程感觉兴趣可以点击：<a href="https://gitee.com/anyuanlzh/anyuanlzh"
                     target: _blank>源码</a> 查看。</p>

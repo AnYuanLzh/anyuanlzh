@@ -1,5 +1,8 @@
-/** * 日期选择器 *
-参考：https://www.bilibili.com/video/BV1k4411C7DX?from=search&seid=7343710285072819819
+/**日期选择器
+*   使用方式：
+*       <DataPickerComp  :open="false"  :value="pickDate" @onchange="onPickerChange" />
+*   参考来源：
+        https://www.bilibili.com/video/BV1k4411C7DX?from=search&seid=7343710285072819819
 */
 
 <template>
@@ -10,7 +13,7 @@
             :value="formatDate"
             placeholder="yyy-mm-dd"
             readonly
-            class="w-44 pl-1 pr-8 py-0.5"
+            class="w-44 pl-1 pr-8 py-0.5 text-black text-base leading-4"
         />
         <span class="w-5 absolute inset-y-0.5 right-0.5">
             <svg
@@ -29,7 +32,8 @@
         </span>
         <div
             v-if="isVisible"
-            class="absolute bg-gray-100 mt-1 ring-2 ring-blue-300 rounded w-56"
+            class="absolute bg-gray-100 mt-1
+                ring-2 ring-blue-300 rounded w-56 sh"
         >
             <div class="flex justify-around h-8 leading-8 text-center my-0.5">
                 <span class="btn-add-year-month" @click="addYear(-1)"
@@ -103,7 +107,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, ref } from "vue";
+import { computed, defineComponent, onMounted, ref } from "vue";
 import {
     addDays,
     addYears,
@@ -120,6 +124,10 @@ export default defineComponent({
             type: Date,
             default: () => new Date(),
         },
+        open: {
+            type: Boolean,
+            default: false,
+        },
     },
     directives: {
         //自定义指令
@@ -128,12 +136,16 @@ export default defineComponent({
             mounted(el, binding) {
                 // console.log(el,binding,vnode);
                 // console.log("mounted:", binding);
-                let input = el.querySelector('#input');
+                let input = el.querySelector("#input");
+                let curComp = binding.instance as any;
+                if (curComp.open) {
+                    input.focus();
+                    curComp.setVisible(true);
+                }
                 // let svg = el.querySelector('svg')
                 let clickHandler = (event: Event) => {
-                    console.log(event.target); //被点击中的目标元素
+                    // console.log(event.target); //被点击中的目标元素
                     //被点中的元素是不是这个组件的子元素
-                    let curComp = binding.instance as any;
                     if (el.contains(event.target)) {
                         // if(input != document.activeElement){
                         //     input.focus()
@@ -152,8 +164,8 @@ export default defineComponent({
 
                 //这个逻辑是用来保持住inut的焦点状态
                 let mousedownHandler = (event: Event) => {
-                    if (el.contains(event.target) && event.target!=input) {
-                        if(input!=document.activeElement){
+                    if (el.contains(event.target) && event.target != input) {
+                        if (input != document.activeElement) {
                             input.focus();
                         }
                         //这是保持焦点的关键
@@ -172,13 +184,10 @@ export default defineComponent({
             },
         },
     },
-    emits:[
-        "onchange"
-    ],
+    emits: ["onchange"],
     setup(props, { emit }) {
         // console.log("setup:", context);
         const isVisible = ref<boolean>(false);
-
         const formatDate = computed<string>(() => {
             let { year, month, day }: IYearMonthDay = getYearMonthDay(
                 props.value
@@ -199,16 +208,12 @@ export default defineComponent({
             let week = curMonthFirstDate.getDay();
             // console.log("week",week);
             //计算开始的日期
-            let startDate = new Date(
-                curMonthFirstDate.getTime() - week * 86400000
-            ); //86400000 = 60*60*1000*24
-            // let startDate = addDays(curMonthFirstDate,-week);
+            let startDate = addDays(curMonthFirstDate,-week);
 
             //循环42天
             let arr: Date[] = [];
             for (let i = 0; i < 42; i++) {
-                arr.push(new Date(startDate.getTime() + i * 86400000));
-                // arr.push(addDays(startDate,i))
+                arr.push(addDays(startDate,i))
             }
             return arr;
         });

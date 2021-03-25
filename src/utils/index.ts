@@ -14,17 +14,20 @@ const createDate = (year: number, month: number, day: number): Date => {
     return new Date(year, month, day);
 };
 
-const addYears = (date:Date, num: number) => {
-    let dateTime = date.setFullYear(date.getFullYear() + num);
-    return new Date(dateTime);
+const addYears = (date: Date, num: number) => {
+    let newDate = new Date(date.getTime());
+    newDate.setFullYear(date.getFullYear() + num);
+    return newDate;
 };
 const addMonths = (date: Date, num: number) => {
-    let dateTime = date.setMonth(date.getMonth() + num);
-    return new Date(dateTime);
+    let newDate = new Date(date.getTime());
+    newDate.setMonth(date.getMonth() + num);
+    return newDate;
 };
 const addDays = (date: Date, num: number) => {
-    let dateTime = date.setDate(date.getDate() + num);
-    return new Date(dateTime);
+    let newDate = new Date(date.getTime());
+    newDate.setDate(date.getDate() + num);
+    return newDate;
 };
 
 export {

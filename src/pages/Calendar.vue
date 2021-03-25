@@ -10,6 +10,7 @@
                 有参考：https://www.bilibili.com/video/BV1k4411C7DX?from=search&seid=7343710285072819819
             </p>
             <DataPickerComp
+                :open="false"
                 :value="pickDate"
                 @onchange="onPickerChange"
             />
