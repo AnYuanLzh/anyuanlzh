@@ -2,9 +2,9 @@ import {
     createRouter,
     createWebHashHistory,
     createWebHistory,
-    RouteRecordRaw
+    RouteRecordRaw,
 } from "vue-router";
-import Home from '../pages/Home.vue';
+import Home from "../pages/Home.vue";
 
 //配置路由
 const routes: Array<RouteRecordRaw> = [
@@ -50,7 +50,7 @@ const routes: Array<RouteRecordRaw> = [
 ];
 //创建路由
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory("/"),
     routes,
 });
 export default router;
