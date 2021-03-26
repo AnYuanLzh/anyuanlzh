@@ -34,6 +34,11 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("../pages/CssLayout.vue"),
     },
     {
+        path: "/css_controls",
+        name: "css_controls",
+        component: () => import("../pages/CssControls.vue"),
+    },
+    {
         path: "/about",
         name: "about",
         component: () => import("../pages/About.vue"),

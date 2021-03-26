@@ -21,6 +21,11 @@
                     首页
                 </router-link>
                 <span class="p-2">|</span>
+                <router-link :to="{ name: 'about' }" class="lzh-link">
+                    关于
+                </router-link>
+                <br/>
+                <span class="p-2"> </span>
                 <router-link :to="{ name: 'calc' }" class="lzh-link">
                     计算器
                 </router-link>
@@ -33,16 +38,10 @@
                     css布局
                 </router-link>
                 <span class="p-2">|</span>
-                <router-link :to="{ name: 'about' }" class="lzh-link underline">
-                    关于
+                <router-link :to="{ name: 'css_controls' }" class="lzh-link">
+                    css controls
                 </router-link>
-                <span class="p-2"> </span>
-                <router-link
-                    :to="{ name: 'notfound' }"
-                    class="lzh-link underline"
-                >
-                    404
-                </router-link>
+                <!-- <span class="p-2">|</span> -->
             </div>
         </div>
         <router-view></router-view>
