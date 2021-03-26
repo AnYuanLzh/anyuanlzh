@@ -532,7 +532,7 @@ export default defineComponent({
         const isShow_FlexDirection = ref<boolean>(false);
         const isShow_JustifyContent = ref<boolean>(false);
         const isShow_AlignItems = ref<boolean>(false);
-        const isShow_GrowShrink = ref<boolean>(true);
+        const isShow_GrowShrink = ref<boolean>(false);
         return {
             isShow_FlexDirection,
             isShow_JustifyContent,

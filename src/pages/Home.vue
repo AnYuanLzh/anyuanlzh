@@ -21,7 +21,7 @@
             <p>如果对这个主页的工程感觉兴趣可以点击查看源码：
                 <a href="https://gitee.com/anyuanlzh/anyuanlzh"
                     target: _blank>
-                    <img class="inline" height="24" version="1.1" width="24" src="../assets/imgs/gitee-logo.png" />
+                    <img class="inline" height="24" width="24" src="../assets/imgs/gitee-logo.png" />
                 </a>
                 <a href="https://github.com/AnYuanLzh/anyuanlzh"
                     target: _blank>
@@ -54,7 +54,7 @@
                     >Vite</a
                 >
                 <p>
-                    现在主要在Notion上作笔记，也推荐大家使用，个人觉得是个不错的工具。
+                    Vite是一种新型的前端构建工具
                 </p>
             </li>
             <li>
@@ -92,7 +92,7 @@
                 >
                 <p>
                     这个就是注册的比较早，后面也没有换其它的平台，当然现在不用了，在上面的东西也不愿意转移了,就留个链接在这个吧.
-                    以后应该不会上csdn上写东西了，以后主要用下面说的那个Notion了。
+                    以后应该不会上csdn上写东西了，以后主要用下面说的Notion了。
                 </p>
                 <p></p>
             </li>

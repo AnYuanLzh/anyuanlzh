@@ -1,5 +1,5 @@
 <template>
-    <div class="pb-6">
+    <div class="pl-4">
         <h1 class="text-center pt-2 pb-1">简单的日历</h1>
         <div>
             <h2 class="font-bold">原生的日期组件:</h2>
