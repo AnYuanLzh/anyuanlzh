@@ -19,8 +19,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, ref } from "vue";
-import DataPickerComp from "../components/DatePickerComp.vue";
+import { defineComponent, ref } from "vue";
+import DataPickerComp from "../../components/tailwind/DatePickerComp.vue";
 export default defineComponent({
     name: "Calendar",
     components: {

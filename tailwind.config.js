@@ -7,9 +7,10 @@ module.exports = {
     variants: {
         extend: {
             //为textColor开启visited变体
-            textColor: ["visited"],
+            // textColor: ["visited"],
             borderWidth: ["hover"],
             borderRadius: ["hover"],
+            textColor: ["active"],
         },
     },
     plugins: [],

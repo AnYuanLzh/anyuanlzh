@@ -1,0 +1,1 @@
+import{d as e,o as t,c as l,a as n}from"./index.6528481b.js";var r=e({name:"About",setup:()=>({})});const o=n("div",{class:"text-center h-48 flex justify-center items-center text-2xl font-blod text-blue-400"},[n("div",null,[n("p",null,"Hello World!")])],-1);r.render=function(e,n,r,s,u,a){return t(),l("div",null,[o])};export default r;

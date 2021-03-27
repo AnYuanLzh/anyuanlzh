@@ -1,6 +1,6 @@
 <template>
     <div class="px-2">
-        <h1 class="text-center font-bold pt-2 pb-1">CSS Layout 练习</h1>
+        <h1 class="text-center font-bold pt-2 pb-1">Flex Layout 练习</h1>
         <h2>FlexBox:</h2>
         <p class="text-gray-500 text-xs">
             多看mdn上的文档：https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex

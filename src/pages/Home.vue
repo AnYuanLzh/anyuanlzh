@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-50 py-6 px-2">
+    <div class="bg-gray-50 py-4 px-2">
         <div class="my">
             <!-- <p>至2021以前一直做的游戏开发工作...</p> -->
             <p>
@@ -18,7 +18,7 @@
                 </p>
             <p>两个地址都可以访问。工程源码其实都是同一份，是同时托管在上述两平台上的。其实现在的gitee上挺好用的，在国内访问速度快，托管主页的设置也更好(尤其是单面应用的静态主页)。当然github上的资源更多...
             </p>
-            <p>如果对这个主页的工程感觉兴趣可以点击查看源码：
+            <p>如果对这个主页的源码工程感觉兴趣可以点击查看源码：
                 <a href="https://gitee.com/anyuanlzh/anyuanlzh"
                     target: _blank>
                     <img class="inline" height="24" width="24" src="../assets/imgs/gitee-logo.png" />
@@ -61,22 +61,33 @@
                 <a
                     target: _blank
                     class="lzh-a"
-                    href="https://tailwindcss.com/"
-                    >Tailwindcss</a
+                    href="https://www.typescriptlang.org/"
+                    >TypeScript</a
                 >
                 <p>
-                    Tailwind CSS 是一个工具集 CSS 框架，这个真的是不要太香，推荐使用。
+                    TypeScript 是 JavaScript 的超集，是 JavaScript 的强类型版本。我认为 TypeScript 是一项非常值得学习的技术。
                 </p>
             </li>
             <li>
                 <a
                     target: _blank
                     class="lzh-a"
-                    href="https://www.typescriptlang.org/"
-                    >TypeScript</a
+                    href="https://tailwindcss.com/"
+                    >Tailwindcss</a
                 >
                 <p>
-                    TypeScript 是 JavaScript 的超集，是 JavaScript 的强类型版本。我认为 TypeScript 是一项非常值得学习的技术。
+                    TailwindCSS 是一个工具集 CSS 框架，灵活性自定义和纯css几乎差不多，但是便捷性要比纯css要好很多，这个真的是不要太香，推荐使用。
+                </p>
+            </li>
+            <li>
+                <a
+                    target: _blank
+                    class="lzh-a"
+                    href="https://element-plus.gitee.io/"
+                    >Element-Plus</a
+                >
+                <p>
+                    Element-Plus 是一个基于vue3的可快速构建web ui原型的ui库。
                 </p>
             </li>
         </ul>
@@ -109,6 +120,8 @@
                 </p>
             </li>
         </ul>
+
+        <div class="h-10"></div>
     </div>
 </template>
 
