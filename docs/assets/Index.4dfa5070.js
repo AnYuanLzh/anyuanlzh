@@ -1,0 +1,1 @@
+import{d as t,e,o as n,c as o,a as r}from"./index.53b94fcd.js";var s=t({name:"BootstrapIndexComp",setup:()=>({})});const a=r("div",null,null,-1),l=r("h1",{class:"text-center text-lg"},"Bootstrap5练习页面",-1);s.render=function(t,s,d,u,c,i){const p=e("router-view");return n(),o("div",null,[a,l,r(p)])};export default s;

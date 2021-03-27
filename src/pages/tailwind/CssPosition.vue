@@ -2,13 +2,14 @@
     <div class="px-2">
         <h1 class="text-center font-bold pt-2 pb-1">CSS Position 练习</h1>
         <p class="text-gray-500 text-xs">
-            多看mdn上的文档：https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex
+            多看mdn上的文档：https://developer.mozilla.org/zh-CN/docs/Web/CSS/position
         </p>
 
         <div class="mt-2">
             <p>Static:</p>
             <p class="text-gray-500 text-xs italic">
-                默认的定位方式。它的位置完全被文档流掌管，你给它设置top left这些也没有用。
+                默认的定位方式。它的位置完全被文档流掌管，你给它设置top
+                left这些也没有用。
             </p>
             <div class="p-4 bg-gray-500 flex flex-row">
                 <div class="w-40 h-20 bg-red-500 border-black border-2">A</div>
@@ -70,7 +71,7 @@
                 视口。该定位方式常用于创建在滚动屏幕时仍固定在相同位置的元素
             </p>
             <p>找不到B,请看右上角。</p>
-            <div class="p-4 bg-gray-500 flex flex-row relative">
+            <div class="p-4 bg-gray-500 flex flex-row">
                 <div class="w-40 h-20 bg-red-500 border-black border-2">A</div>
                 <div
                     class="w-40 h-20 bg-blue-500 border-black border-2 fixed top-6 right-6"
@@ -83,10 +84,70 @@
 
             <p>Sticky:</p>
             <p class="text-gray-500 text-xs italic">
-               粘性定位可以被认为是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。
+                粘性定位可以被认为是相对定位和固定定位的混合。元素在跨越特定阈值前为相对定位，之后为固定定位。
             </p>
-            <div class="p-4 bg-gray-500 flex flex-row relative">
-                
+            <div class="mt-1 px-4 bg-gray-500 h-28 overflow-y-scroll">
+                <div class="text-gray-200">
+                    <div
+                        class="px-2 font-bold bg-gray-900 rounded sticky top-0"
+                    >
+                        Header1
+                    </div>
+                    <p class="px-2">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolores, perspiciatis magni sint sit cumque aspernatur
+                        tempore quos
+                    </p>
+                </div>
+                <div class="text-gray-200">
+                    <div
+                        class="px-2 font-bold bg-gray-900 rounded sticky top-0"
+                    >
+                        Header2
+                    </div>
+                    <p class="px-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolores, perspiciatis magni sint sit cumque aspernatur
+                        tempore quos vitae magnam deleniti quia sed cum facilis
+                        excepturi sequi a minus? Eos, inventore?
+                    </p>
+                </div>
+                <div class="text-gray-200">
+                    <div
+                        class="px-2 font-bold bg-gray-900 rounded sticky top-0"
+                    >
+                        Header2
+                    </div>
+                    <p class="px-1">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolores, perspiciatis magni sint sit cumque aspernatur
+                        tempore quos vitae magnam deleniti quia sed cum facilis
+                        excepturi sequi a minus? Eos, inventore?Eos, inventore?
+                    </p>
+                </div>
+            </div>
+            <div
+                class="mt-1 px-0 bg-gray-500 text-gray-200 flex flex-row overflow-x-scroll"
+            >
+                <div class="ml-6 px-2 font-bold bg-gray-900 rounded sticky left-0">
+                    Header1
+                </div>
+                <p class="px-2 flex-none h-24">
+                    Lorem ipsum dolor sit elit.
+                </p>
+                <div class="px-2 font-bold bg-gray-900 rounded sticky left-0">
+                    Header2
+                </div>
+                <p class="px-1 flex-none  h-24">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <div class="px-2 font-bold bg-gray-900 rounded sticky left-0">
+                    Header2
+                </div>
+                <p class="px-1 flex-none h-24">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
             </div>
         </div>
 
@@ -100,15 +161,12 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
     name: "CompName",
     setup() {
-        const isShow_FlexDirection = ref<boolean>(false);
-        const isShow_JustifyContent = ref<boolean>(false);
-        const isShow_AlignItems = ref<boolean>(false);
-        const isShow_GrowShrink = ref<boolean>(false);
+        const onRef = (el: any) => {
+            console.log(el);
+        };
+
         return {
-            isShow_FlexDirection,
-            isShow_JustifyContent,
-            isShow_AlignItems,
-            isShow_GrowShrink,
+            onRef,
         };
     },
 });

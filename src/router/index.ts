@@ -52,22 +52,22 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("../pages/tailwind/Index.vue"),
         children: [
             {
-                path: "/flex-layout",
+                path: "flex-layout",
                 name: "flex-layout",
                 component: () => import("../pages/tailwind/FlexLayout.vue"),
             },
             {
-                path: "/grid-layout",
+                path: "grid-layout",
                 name: "grid-layout",
                 component: () => import("../pages/tailwind/GridLayout.vue"),
             },
             {
-                path: "/css-position",
+                path: "css-position",
                 name: "css-position",
                 component: () => import("../pages/tailwind/CssPosition.vue"),
             },
             {
-                path: "/css-controls",
+                path: "css-controls",
                 name: "css-controls",
                 component: () => import("../pages/tailwind/CssControls.vue"),
             },

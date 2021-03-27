@@ -57,13 +57,13 @@ export default defineComponent({
     name: "App",
     setup() {
         onMounted((): void => {
-            console.log("onMounted!");
+            // console.log("onMounted!");
             /************* begin ****** for github page's spa */
             let path = localStorage.getItem("path");
             // path = "about";
-            console.log("app-path1:", path);
+            // console.log("app-path1:", path);
             if (path) {
-                console.log("app-path2:", path);
+                // console.log("app-path2:", path);
                 localStorage.removeItem("path");
                 router.replace(path);
             }
