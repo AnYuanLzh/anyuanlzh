@@ -529,10 +529,10 @@ import { defineComponent, ref } from "vue";
 export default defineComponent({
     name: "CompName",
     setup() {
-        const isShow_FlexDirection = ref<boolean>(false);
-        const isShow_JustifyContent = ref<boolean>(false);
-        const isShow_AlignItems = ref<boolean>(false);
-        const isShow_GrowShrink = ref<boolean>(false);
+        const isShow_FlexDirection = ref<boolean>(true);
+        const isShow_JustifyContent = ref<boolean>(true);
+        const isShow_AlignItems = ref<boolean>(true);
+        const isShow_GrowShrink = ref<boolean>(true);
         return {
             isShow_FlexDirection,
             isShow_JustifyContent,
@@ -544,6 +544,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
 @layer utilities {
     h2 {
         @apply text-xl;

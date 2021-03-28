@@ -20,6 +20,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import { useRoute } from "vue-router";
 import DataPickerComp from "../../components/tailwind/DatePickerComp.vue";
 export default defineComponent({
     name: "Calendar",
@@ -27,14 +28,16 @@ export default defineComponent({
         DataPickerComp,
     },
     setup() {
+        const route = useRoute();
+        console.log("route", route.fullPath);
         const pickDate = ref<Date>(new Date());
-        const onPickerChange = (newDate:Date):void=>{
+        const onPickerChange = (newDate: Date): void => {
             pickDate.value = newDate;
-        }
+        };
 
         return {
             pickDate,
-            onPickerChange
+            onPickerChange,
         };
     },
 });

@@ -3,7 +3,7 @@
         <div class="bg-gray-500">
             <!-- <h1 class="text-center text-lg">Tailwindcss练习页面</h1> -->
             <div
-                class="my-1 text-sm text-center py-1 text-gray-100 flex flex-row flex-wrap gap-2 justify-center"
+                class="my-0.5 text-sm text-center py-1 text-gray-100 flex flex-row flex-wrap gap-2 justify-center"
             >
                 <router-link :to="{ name: 'flex-layout' }" class="lzh-nav-link">
                     flex布局
@@ -37,7 +37,7 @@ import router from "../../router";
 export default defineComponent({
     name: "TailWaindIndexComp",
     setup() {
-        router.push("flex-layout");
+        router.push({name:"flex-layout"});
 
         return {};
     },

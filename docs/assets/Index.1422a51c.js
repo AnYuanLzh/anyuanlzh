@@ -1,0 +1,1 @@
+import{d as e,e as t,o as n,c as l,a as s}from"./index.381f78a0.js";var a=e({name:"ElementPlusIndexComp",setup:()=>({})});const r=s("div",null,null,-1),u=s("h1",{class:"text-center text-lg"},"ElementPlus练习页面",-1);a.render=function(e,a,o,d,c,i){const m=t("router-view");return n(),l("div",null,[r,u,s(m)])};export default a;

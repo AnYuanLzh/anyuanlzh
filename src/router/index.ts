@@ -5,7 +5,6 @@ import {
     RouteRecordRaw,
 } from "vue-router";
 import Home from "../pages/Home.vue";
-
 //配置路由
 const routes: Array<RouteRecordRaw> = [
     {
@@ -42,6 +41,11 @@ const routes: Array<RouteRecordRaw> = [
                 path: "/calendar",
                 name: "calendar",
                 component: () => import("../pages/demos/Calendar.vue"),
+            },
+            {
+                path: "/login-register",
+                name: "login-register",
+                component: () => import("../pages/demos/LoginRegister.vue"),
             },
         ],
     },
@@ -80,7 +84,7 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import("../pages/element-plus/Index.vue"),
         children: [
             // {
-            //     path: "/xx",
+            //     path: "xx",
             //     name: "xxx",
             //     component: () => import("../pages/element-plus/xxx.vue"),
             // },
